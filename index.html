@@ -1,6 +1,91 @@
 <!DOCTYPE html>
 <html style="height: 100%;">
   <head>
+    <style>
+      @charset "UTF-8";/*!
+ * animate.css - https://animate.style/
+ * Version - 4.1.1
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2020 Animate.css
+ */
+:root {
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1
+}
+
+
+
+@-webkit-keyframes backInDown {
+    0% {
+        -webkit-transform: translateY(-1200px) scale(.7);
+        transform: translateY(-1200px) scale(.7);
+        opacity: .7
+    }
+
+    80% {
+        -webkit-transform: translateY(0) scale(.7);
+        transform: translateY(0) scale(.7);
+        opacity: .7
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes backInDown {
+    0% {
+        -webkit-transform: translateY(-1200px) scale(.7);
+        transform: translateY(-1200px) scale(.7);
+        opacity: .7
+    }
+
+    80% {
+        -webkit-transform: translateY(0) scale(.7);
+        transform: translateY(0) scale(.7);
+        opacity: .7
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+.animate__backInDown {
+    -webkit-animation-name: backInDown;
+    animation-name: backInDown
+}
+
+
+
+
+@keyframes backInUp {
+    0%{
+        -webkit-transform:translateY(1200px) scale(.7);
+        transform:translateY(1200px) scale(.7);
+        opacity:.7
+    }
+    80%{
+        -webkit-transform:translateY(0) scale(.7);
+        transform:translateY(0) scale(.7);
+        opacity:.7}
+    to{
+        -webkit-transform:scale(1);
+        transform:scale(1);
+        opacity:1}
+}
+
+.animate__backInUp{
+    -webkit-animation-name:backInUp;
+    animation-name:backInUp
+}
+    </style>
     <meta charset="utf-8">
     <title>Władysław Baliuk</title>
     <link rel="stylesheet" type="text/css" href="open/standart.css">
