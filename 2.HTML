@@ -1,0 +1,79 @@
+<html><head>
+    <meta charset="utf-8">
+    <title>Władysław Baliuk</title>
+    <link rel="stylesheet" type="text/css" href="open/standart.css">
+    <link rel="stylesheet" type="text/css" href="open/animate.-all.css">
+    <meta charset="UTF-8">
+    
+    <script type="text/javascript">
+      function show_hide(id) {
+        let e = document.querySelectorAll(id);
+        for( let i = 0; i < e.length; i++) {
+          if (e[i].style.display == 'block') {
+            e[i].style.display = 'none';
+          } 
+          else {
+            e[i].style.display = 'block';
+          }
+        }
+      }
+      
+    </script>
+    <script>
+      number = 0;
+      function addElement(id, what, link) {
+        number = number + .3;
+        var my_div = newDiv = null;
+        if (link != null) {
+          var newDiv = document.createElement("a");
+          newDiv.setAttribute("href", link);
+          newDiv.setAttribute("class", "s11");
+        } else {
+          var newDiv = document.createElement("p");
+        }
+        newDiv.innerHTML = what.replace(/\S/g, '<span style="animation-delay:' + number + 's;">' + '$&</span>');
+        my_div = document.getElementById(id);
+        my_div.parentNode.insertBefore(newDiv, my_div);
+      }
+    </script>
+    <script>
+      nnumber = 0;
+      function addElement2(what, link) {
+        nnumber = nnumber+1;
+        var nnewDiv = document.createElement("p");
+        nnewDiv.setAttribute("class", "hidden center text_to_show_hide");
+        nnewDiv.innerHTML = "<span id='sfdusdfsdv" + nnumber + "'> <script>"+ 'addElement("sfdusdfsdv" + nnumber, what, "header.php" + "?file=" + link);' + '</scr' +'ipt></span>'
+        document.getElementById("startdiv").parentNode.insertBefore(nnewDiv, document.getElementById("startdiv"));
+      }
+    </script>
+  </head>
+  <body>
+      <h1 class="ts center animate__backInDown startre">
+        Władysław Baliuk
+      </h1>
+    <div class="center animate__backInDown startre">
+      <a class="button8 " onclick="show_hide('.text_to_show_hide')">кнопка</a></div>
+    <div class="animate six center">
+      <p class="hidden center text_to_show_hide" style="display: block;">
+        <a href="header.php?file=images/1.jpg" class="s11"><span style="animation-delay:0.3s;">Н</span><span style="animation-delay:0.3s;">а</span><span style="animation-delay:0.3s;">ш</span><span style="animation-delay:0.3s;">а</span> <span style="animation-delay:0.3s;">л</span><span style="animation-delay:0.3s;">ю</span><span style="animation-delay:0.3s;">б</span><span style="animation-delay:0.3s;">и</span><span style="animation-delay:0.3s;">м</span><span style="animation-delay:0.3s;">а</span><span style="animation-delay:0.3s;">я</span> <span style="animation-delay:0.3s;">с</span><span style="animation-delay:0.3s;">с</span><span style="animation-delay:0.3s;">ы</span><span style="animation-delay:0.3s;">л</span><span style="animation-delay:0.3s;">к</span><span style="animation-delay:0.3s;">а</span></a><span id="org_div1"></span>
+        <script>
+          addElement("org_div1", "Наша любимая ссылка", "header.php" + "?file=images/1.jpg");
+        </script>
+      </p>
+      <p class="hidden center text_to_show_hide" style="display: block;">
+        <a href="header.php?file=images/1.jpg" class="s11"><span style="animation-delay:0.6s;">Н</span><span style="animation-delay:0.6s;">а</span><span style="animation-delay:0.6s;">ш</span><span style="animation-delay:0.6s;">а</span> <span style="animation-delay:0.6s;">л</span><span style="animation-delay:0.6s;">ю</span><span style="animation-delay:0.6s;">б</span><span style="animation-delay:0.6s;">и</span><span style="animation-delay:0.6s;">м</span><span style="animation-delay:0.6s;">а</span><span style="animation-delay:0.6s;">я</span> <span style="animation-delay:0.6s;">с</span><span style="animation-delay:0.6s;">с</span><span style="animation-delay:0.6s;">ы</span><span style="animation-delay:0.6s;">л</span><span style="animation-delay:0.6s;">к</span><span style="animation-delay:0.6s;">а</span></a><span id="org_div2"></span>
+        <script>
+          addElement("org_div2", "Наша любимая ссылка", "header.php" + "?file=images/1.jpg");
+        </script>
+      </p>
+      <p class="hidden center text_to_show_hide" style="display: block;"><span id="sfdusdfsdv1"> <script>addElement("sfdusdfsdv" + nnumber, what, "header.php" + "?file=" + link);</script></span></p><div id="startdiv">
+        
+      </div>
+      <script>
+        addElement2("LOLZ","images/1.jpg")
+      </script>
+    </div>
+    
+
+  
+</body></html>

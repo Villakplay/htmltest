@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+  <head>
+    <meta charset="utf-8">
+    <title>Władysław Baliuk</title>
+    <link rel="stylesheet" type="text/css" href="open/standart.css">
+    <link rel="stylesheet" type="text/css" href="open/animate.-all.css">
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+      hid=0;
+      function show_hide(id) {
+        let e = document.querySelectorAll(id);
+        for( let i = 0; i < e.length; i++) {
+          if (hid == 1) {
+            e[i].style.display = 'none';
+          } 
+          else {
+            e[i].style.display = 'block';
+          }
+        }
+        if (hid == 1) {
+            hid =0;
+          } 
+          else {
+            hid =1;
+        }
+      }
+      function addnew() {
+        addElement2(prompt("Nazwa", ""),prompt("link do (images/1.jpg)", ""))
+      }
+    </script>
+    <script>
+
+      number = 0;
+      nnumber = 0;
+      function addElement(id, what, link) {
+        number = number + .3;
+        var my_div = newDiv = null;
+        if (link != null) {
+          var newDiv = document.createElement("a");
+          newDiv.setAttribute("href", link);
+          newDiv.setAttribute("class", "s11");
+        } else {
+          var newDiv = document.createElement("p");
+        }
+        newDiv.innerHTML = what.replace(/\S/g, '<span style="animation-delay:' + number + 's;">' + '$&</span>');
+        my_div = document.getElementById(id);
+        my_div.parentNode.insertBefore(newDiv, my_div);
+      }
+      function addElement2(what, link) {
+        nnumber = nnumber+1;
+        var nnewDiv = document.createElement("p");
+        nnewDiv.setAttribute("class", "hidden center text_to_show_hide");
+        nnewDiv.innerHTML = "<span id='sfdusdfsdv" + nnumber + "'> <script>"+ '</scr' +'ipt></span>'
+        document.getElementById("startdiv").parentNode.insertBefore(nnewDiv, document.getElementById("startdiv"));
+        addElement("sfdusdfsdv" + nnumber, what, "header.php" + "?file=" + link);
+      }
+    </script>
+  </head>
+  <body style="height: 80%;">
+      <h1 class="ts center animate__backInDown startre">
+        Władysław Baliuk
+      </h1>
+    <div class="center animate__backInDown startre">
+      <a class="button8 " onclick="show_hide('.text_to_show_hide')">przycisk</a></div>
+    <div class="animate six center">
+      
+      <div id="startdiv">
+      </div>
+      <script>
+        addElement2("Link nr 1","Tekst do linku nr 1")
+        addElement2("Link nr 2","Tekst do linku nr 2")
+        addElement2("Link nr 3","Tekst do linku nr 3")
+      </script>
+    </div>
+    <div style="position: relative; ">
+      <div class="startre animate__backInUp" style = "position: fixed;padding: 10px;right: 0;bottom: 35px;height: 0px;">
+        <a style="color: #191150;" class=" button8" onclick="addnew()">Dodaj</a></div>
+      <div class="animate six center">
+    </div>
+  </body>
+</html>
